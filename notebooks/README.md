@@ -1,9 +1,14 @@
 # Jupyter Notebooks for Analysis
-## subtitle
+Last Updated: 12-May-2022
 
-Last Updated: dd-MMM-YYYY
+## Data Extraction & Processing
 
 This folder contains the following Jupyter notebooks:
-- [ABARES Regions Data Visualisation](ABARESRegions-VisualisationExample.ipynb)
-- [CLUM Regions Data Visualisation](CLUMRegions-VisualisationExample.ipynb)
+- [DEA Satellite Image Extraction](ABARESRegions-VisualisationExample.ipynb)
+
+## Data Analysis and Visualisation
+
+This folder contains the following Jupyter notebooks:
+- [DEA Satellite Image Inspection](ABARESRegions-VisualisationExample.ipynb)
+
 
