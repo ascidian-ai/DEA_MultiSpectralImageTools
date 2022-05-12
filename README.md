@@ -1,11 +1,4 @@
-# Template Repository for Jupyter Notebook Analysis
+# DEA Multi-Spectral Imaging Tools
+#### Repo: https://github.com/ascidian-ai/DEA_MultiSpectralImageTools
 
-#### Repo: https://github.com/ascidian-ai/templateJupyterNBRepo
-
-Describe the aims and objectives for this project here. 
-
-## Background
-Describe any background information on this repository eg. Why was this repository created? Who will benefit from it? What is the problem this codebase is trying to solve?
-
-## References
-[1]	Include any relevant references here.
+Tools to support image extraction and preparation of Digital Earth Australia (DEA) Satellite Multi-Spectral Images for use in Deep Learning Models.
