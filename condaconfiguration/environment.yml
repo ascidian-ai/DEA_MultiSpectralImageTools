@@ -1,0 +1,29 @@
+name: GeospatialConversions
+
+channels:
+    - anaconda
+    - conda-forge
+    - anaconda-fusion
+    - defaults
+
+dependencies:
+    - python=3.8
+    - pip
+    - jupyter
+    - requests
+    - numpy
+    - pandas
+    - scikit-learn
+    - matplotlib
+    - seaborn
+    - plotly
+    - pyproj
+    - shapely
+    - descartes
+    - geopandas==0.10.2
+    - geopy
+    - folium
+    - pystac-client
+    - odc-client
+    - pip:
+        - dea-tools
