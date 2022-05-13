@@ -1,4 +1,4 @@
-name: GeospatialConversions
+name: DEAGeospatialAnalysis
 
 channels:
     - anaconda
