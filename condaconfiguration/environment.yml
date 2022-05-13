@@ -24,6 +24,6 @@ dependencies:
     - geopy
     - folium
     - pystac-client
-    - odc-client
+    - odc-stac
     - pip:
         - dea-tools
