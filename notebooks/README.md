@@ -4,7 +4,8 @@ Last Updated: 12-May-2022
 ## Data Extraction & Processing
 
 This folder contains the following Jupyter notebooks:
-- [CLUM Land Use Polygon Extraction](CLUM_Extract.ipynb)
+- [CLUMC Land Use Polygon Extraction](CLUMC_Extract.ipynb)
+- [CLUMC Ground Truth Image Generation](CLUMC_GroundTruthImageGeneration.ipynb)
 - [DEA Satellite Image Extraction](DEA_ExtractSentinel.ipynb)
 
 ## Data Analysis and Visualisation
