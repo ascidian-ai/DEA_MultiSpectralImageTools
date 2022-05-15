@@ -1,5 +1,5 @@
 import math
-from datacube.utils.geometry import BoundingBox
+from datacube.utils.geometry import BoundingBox, box, CRS
 from shapely.geometry import Polygon
 
 class DEA_HelperFunctions:
@@ -27,7 +27,10 @@ class DEA_HelperFunctions:
 
     def convert_poly2bbox(self, polygon: Polygon) -> BoundingBox:
         return BoundingBox(polygon.bounds[0],polygon.bounds[1],polygon.bounds[2],polygon.bounds[3])
-        
+
+    def convert_poly2box(self, polygon: Polygon, crs=CRS('epsg:4326')) -> box:
+        return box(left=polygon.bounds[0], bottom=polygon.bounds[1], right=polygon.bounds[2], top=polygon.bounds[3], crs=crs)
+    
     ########################################################################################
     # Calculate tile polygons for entire area
     #
@@ -105,3 +108,4 @@ class DEA_HelperFunctions:
         polygon = Polygon([[lon1,lat1],[lon1,lat2],[lon2,lat2],[lon2,lat1]])
         
         return polygon
+    

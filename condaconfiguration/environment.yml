@@ -27,3 +27,4 @@ dependencies:
     - odc-stac
     - pip:
         - dea-tools
+        - rasterstats
