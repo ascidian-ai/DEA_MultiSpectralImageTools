@@ -1,6 +1,7 @@
 import math
 from datacube.utils.geometry import BoundingBox, box, CRS
 from shapely.geometry import Polygon
+from affine import Affine
 
 class DEA_HelperFunctions:
     def __init__(self, earthradius=6371000, crs='EPSG:3577'):
@@ -108,4 +109,52 @@ class DEA_HelperFunctions:
         polygon = Polygon([[lon1,lat1],[lon1,lat2],[lon2,lat2],[lon2,lat1]])
         
         return polygon
-    
+
+    ########################################################################################
+    def calculate_classlayer(self, ds, gdf, classname):
+        """
+        Takes an xarray dataset (ds) containing spectral bands plus a vector dataset
+        in the form of a GeoDataFrame (gdf) then calculates a raster bitmap for the selected 
+        class value (label).
+        The raster bitmap will be an xarray added to the original dataset (ds).
+
+        Note: This function will modify the original array in-place, adding new layers to the input dataset.
+
+        Attribution: Function modelled on the calculate_indices() function in dea_tools package.
+        Last modified: May 2022
+
+        Parameters
+        ----------
+        ds : xarray Dataset
+            A two-dimensional or multi-dimensional array with containing the
+            spectral bands required to calculate the index. These bands are
+            used as inputs to calculate the selected water index.
+        gdf : GeoDataFrame
+            Data frame containing polygons for different class types (labels)
+            covering the geographic area defined in the input dataset (ds).
+        classname : str
+            The class name is the column header in the GeoDataFrame used
+            to filter out polygons that will be converted into a raster bitmap.
+            Multiple layers will be added by selecting each distinct class value
+            and generating a raster layer for each.
+            
+        Returns
+        -------
+        ds : xarray Dataset
+            The original xarray Dataset inputted into the function, with a 
+            new varible containing the class label index as a DataArray.
+            If drop = True, the new variable/s as DataArrays in the 
+            original Dataset. 
+        """
+        print(f'{classname}')
+        
+        # Extract class values for the selected class (GeoDataFrame column)
+        classvalues = gdf[classname].unique()
+        print(f'{classvalues}')
+
+        #--------------------------------------------------------------------------------
+        # Add as a new variable in dataset
+        #ds[output_band_name] = index_array
+
+        # Return input dataset with added class layers
+        return ds
