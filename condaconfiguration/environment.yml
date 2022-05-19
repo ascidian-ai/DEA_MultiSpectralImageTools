@@ -25,6 +25,7 @@ dependencies:
     - folium
     - pystac-client
     - odc-stac
+    - odc-geo
     - pip:
         - dea-tools
         - rasterstats
