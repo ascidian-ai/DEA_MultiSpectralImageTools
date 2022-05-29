@@ -7,10 +7,10 @@ import pickle
 # Begin Timer
 #---------------------------------------------------------------------
 # Returns current time as seconds since beginning of epoch.
-def begin_timer():
+def begin_timer(info=True):
     stime = time.time()
     stime_f = time.ctime(stime)
-    print('[ Begin timer at %s ]'%(stime_f))
+    if info: print('[ Begin timer at %s ]'%(stime_f))
     return stime
 
 ######################################################################
@@ -19,11 +19,11 @@ def begin_timer():
 # Takes start time from begin_timer() function as input.
 # Returns end time as seconds since beginning of epoch.
 # Returns duration between start and end time in seconds.
-def end_timer(stime):
+def end_timer(stime, info=True):
     etime = time.time()
     durn = etime - stime
     etime_f = time.ctime(etime)
-    print('[ End timer at   %s | Duration: %f s ]'%(etime_f,durn))
+    if info: print('[ End timer at   %s | Duration: %f s ]'%(etime_f,durn))
     return etime, durn
 
 ######################################################################
