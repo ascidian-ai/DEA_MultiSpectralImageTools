@@ -133,3 +133,4 @@ dmypy.json
 .idea/modules.xml
 .idea/inspectionProfiles/profiles_settings.xml
 .idea/DEA_MultiSpectralImageTools.iml
+datasets/crop_regions.json
